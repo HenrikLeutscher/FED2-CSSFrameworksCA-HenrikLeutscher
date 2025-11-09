@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Snazzy Social Media Login Page" />
+  <meta name="keywords" content="Social Media, Snazzy, Login, Register" />
+  <meta name="author" content="Henrik Leutscher" />
+  <link rel="icon" type="image/png" href="./assets/icons/favicon.png" />
+  <title>Feed | Snazzy</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body class="bg-gray-700 text-white">
+
+  <header class="w-screen h-40 border-b-4 border-yellow-200 flex justify-between items-center px-6 bg-gray-900">
+    <a href="../index.html">
+      <img class="w-40" src="https://i.ibb.co/TMj8xNWK/Snazzy-Logo2.png" alt="Snazzy logo">
+    </a>
+
+    <div class="hidden md:flex flex-row">
+      <a href="../profile/profile.html"
+          class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-yellow-400 transition">Profile</a>
+        <a href="#"
+          class="block px-4 py-2 text-sm bg-gray-400 hover:text-yellow-400 transition cursor-not-allowed">Feed</a>
+        <a href="../index.html"
+          class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-yellow-400 transition">Logout</a>
+    </div>
+
+    <div class="relative inline-block text-left md:hidden">
+      <button id="dropdown-button" class=" flex flex-row items-center">
+        Menu
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06 0L10 10.94l3.71-3.73a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" />
+        </svg>
+      </button>
+
+      <div id="dropdown-menu"
+        class="hidden absolute right-0 mt-2 w-40 bg-gray-800 text-white rounded-md shadow-lg border border-gray-700 overflow-hidden z-50 transition transform origin-top-right">
+        <a href="../profile/profile.html"
+          class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-yellow-400 transition">Profile</a>
+        <a href="#"
+          class="block px-4 py-2 text-sm bg-gray-400 hover:text-yellow-400 transition cursor-not-allowed">Feed</a>
+        <a href="../index.html"
+          class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-yellow-400 transition">Logout</a>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="p-1 mx-auto flex flex-col justify-center items-center" role="main">
+    <h1 class="border-b-2 border-yellow-200 w-[75%] text-center">Feed</h1>
+    <div class="m-3 w-[50%] max-w-90 mx-auto flex flex-row gap-5">
+      <input type="text" id="searchInput" placeholder="Search posts..." aria-label="Search posts"/>
+      <select id="sort" aria-label="Sort posts">
+          <option>Sort by:</option>
+          <option value="latest">Latest</option>
+          <option value="oldest">Oldest</option>
+          <option value="most-viewed">Most viewed</option>
+          <option value="most-liked">Most Liked</option>
+        </select>
+    </div>
+
+    <div class="w-[90%] md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 max-w-6xl mx-auto">
+      <div class="feedPosts">
+        <p class="username">@OlaNordman</p>
+        <h2>Post title</h2>
+        <p>This is a post content sample</p>
+        <img src="https://cdn.pixabay.com/photo/2025/10/02/06/28/mood-9867715_1280.jpg" alt="Mountains on the evening">
+        <p class="italic">Date Posted: March 10, 2025</p>
+      </div>
+      <div class="feedPosts">
+        <p class="username">@OlaNordman</p>
+        <h2>Post title</h2>
+        <p>This is a post content sample</p>
+        <img src="https://cdn.pixabay.com/photo/2025/10/15/21/19/gifts-9897006_640.jpg" alt="Colorful gift boxes stacked">
+        <p class="italic">Date Posted: March 10, 2025</p>
+      </div>
+      <div class="feedPosts">
+        <p class="username">@OlaNordman</p>
+        <h2>Post title</h2>
+        <p>This is a post content sample</p>
+        <img src="https://cdn.pixabay.com/photo/2025/10/03/13/44/boathouse-9871057_1280.jpg" alt="Boathouse on the lake">
+        <p class="italic">Date Posted: March 10, 2025</p>
+      </div>
+      <div class="feedPosts">
+        <p class="username">@OlaNordman</p>
+        <h2>Post title</h2>
+        <p>This is a post content sample</p>
+        <img src="https://cdn.pixabay.com/photo/2025/08/09/17/47/modelling-9764984_640.jpg" alt="Military Airplane flying in the sky">
+        <p class="italic">Date Posted: March 10, 2025</p>
+      </div>
+      <div class="feedPosts">
+        <p class="username">@OlaNordman</p>
+        <h2>Post title</h2>
+        <p>This is a post content sample</p>
+        <img src="https://cdn.pixabay.com/photo/2025/10/17/09/29/nature-9899712_640.jpg" alt="2 Sheeps eating grass in a field">
+        <p class="italic">Date Posted: March 10, 2025</p>
+      </div>
+      <div class="feedPosts">
+        <p class="username">@OlaNordman</p>
+        <h2>Post title</h2>
+        <p>This is a post content sample</p>
+        <img src="https://cdn.pixabay.com/photo/2025/04/17/17/10/reed-9540853_640.jpg" alt="Reeds swaying in the wind">
+        <p class="italic">Date Posted: March 10, 2025</p>
+      </div>
+      <div class="feedPosts">
+        <p class="username">@OlaNordman</p>
+        <h2>Post title</h2>
+        <p>This is a post content sample</p>
+        <img src="https://cdn.pixabay.com/photo/2025/05/23/06/35/sparrow-9617024_640.jpg" alt="Sparrow perched on a branch">
+        <p class="italic">Date Posted: March 10, 2025</p>
+      </div>
+      <div class="feedPosts">
+        <p class="username">@OlaNordman</p>
+        <h2>Post title</h2>
+        <p>This is a post content sample</p>
+        <img src="https://cdn.pixabay.com/photo/2023/04/04/07/56/birds-7898729_640.jpg" alt="Two birds swimming in water">
+        <p class="italic">Date Posted: March 10, 2025</p>
+      </div>
+      <div class="feedPosts">
+        <p class="username">@OlaNordman</p>
+        <h2>Post title</h2>
+        <p>This is a post content sample</p>
+        <img src="https://cdn.pixabay.com/photo/2025/09/16/03/24/kawa-karpo-9836966_640.jpg" alt="Kawa Karpo mountain with clouds">
+        <p class="italic">Date Posted: March 10, 2025</p>
+      </div>
+      <div class="feedPosts">
+        <p class="username">@OlaNordman</p>
+        <h2>Post title</h2>
+        <p>This is a post content sample</p>
+        <img src="https://cdn.pixabay.com/photo/2025/09/03/08/13/mountains-9812916_640.jpg" alt="Mountain landscape">
+        <p class="italic">Date Posted: March 10, 2025</p>
+      </div>
+    </div>
+    <button id="openCreatePost" class="fixed bottom-0 lg:right-5">Create a new post</button>
+    <div id="createPostWindow" class="fixed inset-0 bg-gray-700/75 hidden justify-center items-center z-50">
+      <div class="bg-gray-800 p-6 rounded-xl w-full max-w-md shadow-lg" role="dialog" aria-modal="true" aria-labelledby="createPost">
+        <h2 id="createPost" class="text-xl font-semibold mb-4">Create a New Post</h2>
+
+        <form class="space-y-4" action="/post" method="get">
+          <label for="title" class="font-bold">Title:</label>
+          <input type="text" id="title" placeholder="Title"  required/>
+
+          <label for="thumbnail" class="font-bold">Thumbnail URL:</label>
+          <input type="url" id="thumbnail" placeholder="Thumbnail URL"/>
+
+          <label for="postbody" class="font-bold">Body Text:</label>
+          <textarea id="postbody" placeholder="Write something..." required
+            class="h-24"></textarea>
+
+          <div class="flex justify-end gap-3">
+            <button type="button" id="closeCreatePost" class="px-4 py-2 rounded bg-gray-600 hover:bg-gray-500">
+              Cancel
+            </button>
+
+            <button type="submit">Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-gray-900 w-screen h-20 flex justify-center items-center border-t-4 border-yellow-200 text-white">
+    <p>&copy; 2025 Snazzy. All rights reserved.</p>
+  </footer>
+  <script src="../js/dropdown.js"></script>
+  <script src="../js/feed.js"></script>
+</body>
+
+</html>
