@@ -19,7 +19,7 @@ h3 {
 }
 
 input, textarea, select {
-  @apply w-full bg-gray-900 border border-gray-600 px-3 py-2 rounded hover:border-yellow-400;
+  @apply w-full sm:w-[300px] bg-gray-900 border border-gray-600 px-3 py-2 rounded hover:border-yellow-400;
 }
 
 input, select, textarea ::placeholder {
@@ -65,5 +65,9 @@ h3 {
 }
 
 p, button {
+    @apply text-sm md:text-base lg:text-lg;
+}
+
+label {
     @apply text-sm md:text-base lg:text-lg;
 }
