@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Snazzy Social Media Login Page" />
+  <meta name="keywords" content="Social Media, Snazzy, Login, Register" />
+  <meta name="author" content="Henrik Leutscher" />
+  <link rel="icon" type="image/png" href="./assets/icons/favicon.png" />
+  <title>Login | Snazzy</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="bg-gray-700 text-white flex flex-col min-h-screen">
+  <header class="w-screen h-40 border-b-4 border-yellow-200 flex justify-between items-center px-4 bg-gray-900">
+    <a href="./index.html">
+      <img class="w-40" src="https://i.ibb.co/TMj8xNWK/Snazzy-Logo2.png"
+        alt="Snazzy, yellow text spelling out Snazzy with a lightning bolt as an S">
+    </a>
+  </header>
+
+  <main class="p-2 mx-auto flex flex-row justify-center pb-20 flex-1" role="main">
+
+    <div id="login-content" class="active justify-center items-center flex flex-col md:flex-row bg-gray-800 rounded-3xl p-10 my-auto text-center">
+      <section class="md:mr-10">
+        <h1>Login</h1>
+        <form class="flex flex-col" action="/profile/profile.html" method="get">
+          <label for="login-username" class="font-bold">Username:</label>
+          <input type="text" id="login-username" name="username" aria-label="Username" placeholder="Enter Username" autocomplete="username" required />
+          <label for="login-password" class="font-bold">Password:</label>
+          <input type="password" id="login-password" name="password" aria-label="Password" minlength="8" autocomplete="current-password" placeholder="Enter Password" required />
+          <button type="submit">Login</button>
+        </form>
+      </section>
+      <div class="flex flex-col items-center">
+        <p class="italic">Dont have an account?</p>
+        <a href="#" id="register-toggle" class="underline text-blue-400 flex flex-row hover:text-yellow-400">
+            Register Here
+          </a>
+      </div>
+    </div>
+
+    <div id="register-content" class="hidden justify-center items-center flex flex-col md:flex-row bg-gray-800 rounded-3xl p-10 my-auto auto-rows-auto auto-flow-dense">
+      <section class="md:mr-10">
+        <h2>Register</h2>
+        <form class="flex flex-col" action="/profile/profile.html" method="get">
+          <label for="register-username" class="font-bold">Username:</label>
+          <input type="text" id="register-username" name="username" aria-label="Username" placeholder="Enter Username" required />
+          <label for="register-email" class="font-bold">Email:</label>
+          <input type="email" id="register-email" name="email" aria-label="Email" placeholder="Enter Email" required />
+          <label for="register-password" class="font-bold">Password:</label>
+          <input type="password" id="register-password" name="password" aria-label="Password" minlength="8" required placeholder="Enter Password" />
+          <button type="submit">Register</button>
+        </form>
+      </section>
+
+      <div class="flex flex-col items-center">
+        <p class="italic">Already have an account?
+        </p>
+        <a href="#" id="login-toggle" class="underline text-blue-400 flex flex-row hover:text-yellow-400">
+            Login Here
+          </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-gray-900 w-screen h-20 flex justify-center items-center border-t-4 border-yellow-200 text-white">
+    <p>&copy; 2025 Snazzy. All rights reserved.</p>
+  </footer>
+  <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
